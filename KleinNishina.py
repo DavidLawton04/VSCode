@@ -34,6 +34,7 @@ fig = plt.figure(figsize=(800/DPI, 1000/DPI))
 ax1 = fig.add_subplot(211, projection='polar')
 ax2 = fig.add_subplot(212)
 
+
 # Our grid of photon energies (in MeV).
 Egrid = 0.001, 0.01, 0.1, 1, 10
 for E in Egrid:
