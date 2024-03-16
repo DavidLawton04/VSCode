@@ -11,7 +11,7 @@ def mapfunc(x, y, k):
 
 
 #Evenly spaced set of points between 0 and 2*pi
-points = np.linspace(0, 2*np.pi, 14)
+points = np.linspace(0, 2*np.pi, 12)
 x, y = np.meshgrid(points, points)
 colour = y.ravel()
 
@@ -23,13 +23,13 @@ def plotter(k):
     ax.set_xlim(0, 2*np.pi)
     ax.set_ylim(0, 2*np.pi)
     plt.title(f'Motion of System for k = {k}')
-    for i in range(100):
+    for i in range(1000):
         x, y = mapfunc(x, y, k)
         x = np.mod(x, 2*np.pi)
         y = np.mod(y, 2*np.pi)
         scat = ax.scatter(x, y, s=0.5, c=colour, cmap='nipy_spectral')
         scat.set_offsets(np.c_[x.ravel(), y.ravel()])
-    plt.savefig(f'Python/Chaos/ChaosAssignmentstillk{k}.pdf')
+    plt.savefig(f'Python/Chaos/ChaosAssignmentstillk{k}.png')
 
 
 #Create plot for list of k values
