@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-iterations = range(1,600)
+iterations = range(1,300)
 
 def func(a,x):
     for i in iterations:
@@ -19,6 +19,7 @@ plt.figure('bifurc')
 for x0 in xlist:
     for g in alist:
         glist.append(func(g,x0))
-    plt.plot(alist,glist,'.b',markersize=0.05)
+    plt.plot(alist, glist, '.k', markersize=0.07)
     glist=[]
-plt.savefig('\dj_lawton\home\VSCode\ bifurc.pdf')
+'''plt.savefig('/home/dj-lawton/VSCode/bifurc.pdf')'''
+plt.show()
